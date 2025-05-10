@@ -15,7 +15,7 @@ def index(request):
 def home(request):
     return render(request, 'restaurant/home.html', {})
 
-class MenuItemView(ListCreateAPIView):
+class MenuItemsView(ListCreateAPIView):
     queryset = MenuItem.objects.all()
     serializer_class = MenuItemSerializer
     permission_classes = [IsAuthenticated]
